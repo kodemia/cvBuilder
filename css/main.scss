@@ -1,0 +1,197 @@
+$kodeGreen:rgb(64,247,4);
+$kodeBlue:rgb(0,108,255);
+$kodeAlpha:.7;
+
+body{
+	background:#ddd;
+	padding-bottom:40px;
+}
+.container{
+	background:white;
+}
+
+.navbar{
+	.navbar-brand{
+		width:100px;
+		img{
+			width:100%;
+		}
+	}
+}
+
+.main-wrapper{
+	margin-top:20px;
+}
+
+.personal-data{
+	background-image:url("../img/bg-pattern.png");
+	background-color:#2D2D2D;
+	.resume-picture{
+		border:1px solid $kodeGreen;
+		width:120px;
+		height:120px;
+		border-radius:100%;
+		background:url("../img/profile-pic.jpg");
+		background-size:cover;
+		margin:30px auto;
+	}
+	.data-wrapper{
+		h2{
+			color:white;
+			background:rgba($kodeGreen, $kodeAlpha);
+			font-size:16px;
+			padding:5px 5px 5px 15px;
+			margin-bottom:20px;
+		}
+		.data-label{
+			padding-left:30px;
+			&.name{
+				background:url("../img/svg/person.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.address{
+				background:url("../img/svg/location.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.phone{
+				background:url("../img/svg/device-mobile.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.email{
+				background:url("../img/svg/mail.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.website{
+				background:url("../img/svg/link.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.skype{
+				background:url("../img/svg/skype-logo.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.twitter{
+				background:url("../img/svg/twitter-logo.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.linkedin{
+				background:url("../img/svg/linkedin-logo.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.facebook{
+				background:url("../img/svg/facebook-logo.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			&.verified{
+				background:url("../img/svg/verified.svg");
+				background-size:20px 20px;
+				background-repeat:no-repeat;
+				background-position:center left;
+			}
+			.label-title{
+				font-size:16px;
+				font-weight:bold;
+				color:white;
+				margin:0px;
+
+			}
+			.label-content{
+				font-size:12px;
+				color:white;
+				font-style:italic;
+			}
+		}
+	}
+}
+
+.experience-data{
+	.resume-header{
+		background:#191919;
+		width:calc(100% + 30px);
+		margin-left:-15px;
+		padding:40px 30px 30px 50px;
+		h1{
+			color:$kodeGreen;
+			font-size:36px;
+		}
+		h3{
+			color:white;
+			font-style:cursive;
+			font-size:16px;
+		}
+	}
+	.resume-body{
+		padding:40px 35px 0 35px;
+		.resume-block{
+			.block-title{
+				text-transform: uppercase;
+			    letter-spacing: 5px;
+			    font-size: 18px;
+			    color: #333;
+			    border-bottom: 1px solid #333;
+			    padding-bottom: 10px;
+			}
+			.block-article{
+				margin-top:20px;
+				.date-wrapper{
+					border:1px solid #333;
+					box-shadow:3px 3px 3px #ccc;
+					width:100%;
+					text-align:center;
+				}
+				.article-wrapper{
+					.article-title{
+						font-size:18px;
+						font-weight: bold;
+					}
+					.article-subtitle{
+						font-style:italic;
+						font-size:14px;
+						color:$kodeBlue;
+						font-weight:bold;
+					}
+					.article-text{
+						font-size:14px;
+						color:#333;
+						text-align:justify;
+					}
+				}
+				&:last-of-type{
+					margin-bottom:40px;
+				}
+			}
+			.skill-wrapper{
+				margin-bottom:30px;
+				.skill-content{
+					.progress{
+						background:$kodeBlue;
+						.progress-bar{
+							background-color:$kodeGreen;
+						}
+						.progress-bar-striped{
+							    background-image: linear-gradient(45deg,rgba(45,45,45,.25) 25%,transparent 25%,transparent 50%,rgba(45,45,45,.25) 50%,rgba(45,45,45,.25) 75%,transparent 75%,transparent);
+    							background-size: 1rem 1rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
