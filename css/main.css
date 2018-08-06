@@ -1,6 +1,95 @@
+:root {
+  --primary-color:51,255,0;
+  --secondary-color:0,102,255;
+  --main-opacity: .7;
+}
+
 body {
   background: #ddd;
   padding-bottom: 40px;
+}
+
+.palette-wrapper {
+  position: absolute;
+  left: 0;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.palette-wrapper .toggle-palette {
+  width: 50px;
+  height: 50px;
+  background: url("../img/color-palette.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.palette-wrapper .schema-selector {
+  position: relative;
+  height: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.palette-wrapper .schema-selector:before {
+  content: "";
+  width: 15px;
+  height: 30px;
+  border-radius: 50px 0px 0px 50px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+}
+.palette-wrapper .schema-selector:after {
+  content: "";
+  width: 15px;
+  height: 30px;
+  border-radius: 0px 50px 50px 0px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  display: block;
+}
+.palette-wrapper .schema-selector.schema-1:before {
+  background: #cc00ff;
+}
+.palette-wrapper .schema-selector.schema-1:after {
+  background: #0066ff;
+}
+.palette-wrapper .schema-selector.schema-2:before {
+  background: yellow;
+}
+.palette-wrapper .schema-selector.schema-2:after {
+  background: #33ff00;
+}
+.palette-wrapper .schema-selector.schema-3:before {
+  background: #cc00ff;
+}
+.palette-wrapper .schema-selector.schema-3:after {
+  background: red;
+}
+.palette-wrapper .schema-selector.schema-4:before {
+  background: #33ff00;
+}
+.palette-wrapper .schema-selector.schema-4:after {
+  background: yellow;
+}
+.palette-wrapper .schema-selector.schema-5:before {
+  background: #33ff00;
+}
+.palette-wrapper .schema-selector.schema-5:after {
+  background: #0066ff;
+}
+.palette-wrapper .selectors-wrapper {
+  height: 0px;
+  overflow: hidden;
+}
+.palette-wrapper .selectors-wrapper.active {
+  padding-top: 10px;
+  height: auto;
 }
 
 .container {
@@ -23,7 +112,7 @@ body {
   background-color: #2D2D2D;
 }
 .personal-data .resume-picture {
-  border: 1px solid #40f704;
+  border: 1px solid rgb(var(--primary-color));
   width: 120px;
   height: 120px;
   border-radius: 100%;
@@ -33,73 +122,83 @@ body {
 }
 .personal-data .data-wrapper h2 {
   color: white;
-  background: rgba(64, 247, 4, 0.7);
+  background: rgba(var(--primary-color), var(--main-opacity));
   font-size: 16px;
   padding: 5px 5px 5px 15px;
   margin-bottom: 20px;
 }
 .personal-data .data-wrapper .data-label {
   padding-left: 30px;
+  position: relative;
 }
-.personal-data .data-wrapper .data-label.name {
-  background: url("../img/svg/person.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(var(--primary-color));
 }
-.personal-data .data-wrapper .data-label.address {
-  background: url("../img/svg/location.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.name:before {
+  -webkit-mask: url("../img/svg/person.svg") no-repeat 100%;
+  mask: url("../img/svg/person.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.phone {
-  background: url("../img/svg/device-mobile.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.address:before {
+  -webkit-mask: url("../img/svg/location.svg") no-repeat 100%;
+  mask: url("../img/svg/location.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.email {
-  background: url("../img/svg/mail.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.phone:before {
+  -webkit-mask: url("../img/svg/device-mobile.svg") no-repeat 100%;
+  mask: url("../img/svg/device-mobile.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.website {
-  background: url("../img/svg/link.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.email:before {
+  -webkit-mask: url("../img/svg/mail.svg") no-repeat 100%;
+  mask: url("../img/svg/mail.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.skype {
-  background: url("../img/svg/skype-logo.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.website:before {
+  -webkit-mask: url("../img/svg/link.svg") no-repeat 100%;
+  mask: url("../img/svg/link.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.twitter {
-  background: url("../img/svg/twitter-logo.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.skype:before {
+  -webkit-mask: url("../img/svg/skype-logo.svg") no-repeat 100%;
+  mask: url("../img/svg/skype-logo.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.linkedin {
-  background: url("../img/svg/linkedin-logo.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.twitter:before {
+  -webkit-mask: url("../img/svg/twitter-logo.svg") no-repeat 100%;
+  mask: url("../img/svg/twitter-logo.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.facebook {
-  background: url("../img/svg/facebook-logo.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.linkedin:before {
+  -webkit-mask: url("../img/svg/linkedin-logo.svg") no-repeat 100%;
+  mask: url("../img/svg/linkedin-logo.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
-.personal-data .data-wrapper .data-label.verified {
-  background: url("../img/svg/verified.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center left;
+.personal-data .data-wrapper .data-label.facebook:before {
+  -webkit-mask: url("../img/svg/facebook-logo.svg") no-repeat 100%;
+  mask: url("../img/svg/facebook-logo.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+.personal-data .data-wrapper .data-label.verified:before {
+  -webkit-mask: url("../img/svg/verified.svg") no-repeat 100%;
+  mask: url("../img/svg/verified.svg") no-repeat 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
 .personal-data .data-wrapper .data-label .label-title {
   font-size: 16px;
@@ -120,7 +219,7 @@ body {
   padding: 40px 30px 30px 50px;
 }
 .experience-data .resume-header h1 {
-  color: #40f704;
+  color: rgb(var(--primary-color));
   font-size: 36px;
 }
 .experience-data .resume-header h3 {
@@ -154,8 +253,8 @@ body {
 }
 .experience-data .resume-body .resume-block .block-article .article-wrapper .article-subtitle {
   font-style: italic;
-  font-size: 14px;
-  color: #006cff;
+  font-size: 16px;
+  color: rgb(var(--secondary-color));
   font-weight: bold;
 }
 .experience-data .resume-body .resume-block .block-article .article-wrapper .article-text {
@@ -170,10 +269,10 @@ body {
   margin-bottom: 30px;
 }
 .experience-data .resume-body .resume-block .skill-wrapper .skill-content .progress {
-  background: #006cff;
+  background: rgb(var(--secondary-color));
 }
 .experience-data .resume-body .resume-block .skill-wrapper .skill-content .progress .progress-bar {
-  background-color: #40f704;
+  background-color: rgb(var(--primary-color));
 }
 .experience-data .resume-body .resume-block .skill-wrapper .skill-content .progress .progress-bar-striped {
   background-image: linear-gradient(45deg, rgba(45, 45, 45, 0.25) 25%, transparent 25%, transparent 50%, rgba(45, 45, 45, 0.25) 50%, rgba(45, 45, 45, 0.25) 75%, transparent 75%, transparent);
