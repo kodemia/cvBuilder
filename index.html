@@ -16,7 +16,7 @@
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
-				<p>Kodemia CV Builder</p>
+				
 				<!--ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
 										<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col col-sm-8 offset-sm-2">
 					<form>
-						<div class="step-1">
+						<div class="step step-1">
 							<h1>Ingresa tus datos personales</h1>
 							<h2>Información general</h2>
 							<div class="form-group">
@@ -92,9 +92,9 @@
 									<input type="text" class="form-control" id="" placeholder="Skype">
 								</div>
 							</div>
-							<div class="btn btn-primary pull-right">Siguiente</div>
+							<div class="btn btn-primary pull-right" onclick="nextStep(this)">Siguiente</div>
 						</div>
-						<div class="step-2">
+						<div class="step step-2 d-none">
 							<h1>Experiencia</h1>
 							<h2>Empleos anteriores</h2>
 							<div class="form-group">
@@ -142,9 +142,9 @@
 								<input type="text" class="form-control" id="" placeholder="Año de inicio">
 								<input type="text" class="form-control" id="" placeholder="Año de finalización">
 							</div>
-							<div class="btn btn-primary pull-right">Siguiente</div>
+							<div class="btn btn-primary pull-right" onclick="nextStep(this)">Siguiente</div>
 						</div>
-						<div class="step-3">
+						<div class="step step-3 d-none">
 							<h1>Habilidades y Experiencia</h1>
 							<h2>Escribe el nombre de tu habilidad y el porcentaje en que la dominas (p.e. Inglés 80%) </h2>
 							<div class="form-group">

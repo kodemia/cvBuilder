@@ -7,9 +7,10 @@ const kodeCyan = "0,255,255";
 const kodeRed = "255,0,0";
 const kodeWhite = "208,208,208";
 
-function setBodyBackground(){
-	body.style.setProperty('bodyBackground', "#ffff00")
+const nextStep = currentStep => {
+    $(currentStep).closest(".step").toggleClass("d-none").next(".step").toggleClass("d-none")
 }
+
 const changeColorSchema = schema => {
     switch (schema) {
         case "schema1":
@@ -46,3 +47,4 @@ const changeColorSchema = schema => {
 const togglePalette = btn => {
 	$(btn).siblings(".selectors-wrapper").toggleClass("active")
 }
+
