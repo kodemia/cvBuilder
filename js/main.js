@@ -6,9 +6,43 @@ const kodeMagenta = "204,0,255";
 const kodeCyan = "0,255,255";
 const kodeRed = "255,0,0";
 const kodeWhite = "208,208,208";
+var experienceArray = []
 
 const nextStep = currentStep => {
     $(currentStep).closest(".step").toggleClass("d-none").next(".step").toggleClass("d-none")
+}
+
+const toggleInputControl = currentControl => {
+    let controlValue = $(currentControl).is(":checked")
+    let controlInput = $(currentControl).closest(".form-group").find(".form-control")
+
+    let toggle = controlValue ? (
+        controlInput.attr("disabled",false)
+    ) : (
+        controlInput.attr("disabled",true)
+    );
+}
+
+const addExperience = currentForm => {
+    let form = $(currentForm).closest("form")
+    let objectCompany = $(form).find("#company").val()
+    let objectRole = $(form).find("#role").val()
+    let objectDescription = $(form).find("#description").val()
+    let objectFromYear = $(form).find("#from-year").val()
+    let objectToYear = $(form).find("#to-year").val()
+    let experienceObject = {objectCompany,objectRole,objectDescription,objectFromYear,objectToYear}
+    experienceArray.push(experienceObject)
+    $(form).find("input").val("")
+    printExperience(".experience-wrapper",experienceObject)
+}
+
+const printExperience = (experienceWrapper,obj) => {
+    $(experienceWrapper).append(`
+        <h1 class="company-preview">${obj.objectCompany}</h1>
+        <h2 class="role-preview">${obj.objectRole}</h2>
+        <p class="description-preview">${obj.objectDescription}</p>
+        <p class="period-preview"><span class="from">${obj.objectFromYear}</span> - <span class="to">${obj.objectToYear}</span></p>
+    `)
 }
 
 const changeColorSchema = schema => {
