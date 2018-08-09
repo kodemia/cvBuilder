@@ -15,74 +15,174 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
-			<div id="sign-in" class="btn btn-outline-secondary">Facebook Login</div>
-			<div id="sign-out" class="btn btn-outline-secondary">Cerrar sesión</div>
-				<!--ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-										<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-										<a class="nav-link" href="#">Link</a>
-					</li>
-			</ul-->
-		</div>
-	</nav>
-	<div id="main-wrapper" class="section main-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col col-sm-8 offset-sm-2">
-					<form>
-						<div class="step step-1">
-							<h1>Ingresa tus datos personales</h1>
-							<h2>Información general</h2>
-							<div class="form-group">
-								<label for="">Cargo actual
-								</label>
-								<input type="text" class="form-control" id="" placeholder="Cargo actual">
-							</div>
+			<div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent"></div>
+		</nav>
+		<div class="section main-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col col-sm-8 offset-sm-2">
+						<div class="card">
+							<div class="card-body">
+								<form>
+									<div class="step step-1">
+										<h1>Ingresa tus datos personales</h1>
+										<h2>Información general</h2>
+										<div class="row">
+											<div class="form-group col-sm-6">
+												<label for="">Nombre</label>
+												<input type="text" class="form-control" id="" placeholder="Nombre">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Teléfono</label>
+												<input type="text" class="form-control" id="" placeholder="Teléfono">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Ocupación
+												</label>
+												<input type="text" class="form-control" id="" placeholder="Cargo actual">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Dirección</label>
+												<input type="text" class="form-control" id="" placeholder="Dirección">
+											</div>
 
-							<div class="form-group">
-								<label for="">Nombre</label>
-								<input type="text" class="form-control" id="" placeholder="Nombre">
-							</div>
-							<div class="form-group">
-								<label for="">Dirección</label>
-								<input type="text" class="form-control" id="" placeholder="Dirección">
-							</div>
-							<div class="form-group">
-								<label for="">Teléfono</label>
-								<input type="text" class="form-control" id="" placeholder="Teléfono">
-							</div>
-							<div class="form-group">
-								<label for="">Email</label>
-								<input type="text" class="form-control" id="" placeholder="Email">
-							</div>
-							<div class="form-group">
-								<label for="">Sitio Web</label>
-								<input type="text" class="form-control" id="" placeholder="Email">
-							</div>
-							<h2>Redes sociales</h2>
-							<div class="row">
-								<div class="form-group col">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="fb-url" onclick="toggleInputControl(this)">
-										<label class="form-check-label" for="defaultCheck1">Facebook</label>
+											<div class="form-group col-sm-6">
+												<label for="">Email</label>
+												<input type="text" class="form-control" id="" placeholder="Email">
+											</div>
+											<div class="form-group col-sm-6">
+												<label for="">Sitio Web</label>
+												<input type="text" class="form-control" id="" placeholder="Email">
+											</div>
+										</div>
+
+										<h2>Redes sociales</h2>
+										<div class="row">
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="fb-url" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Facebook</label>
+												</div>
+												<input type="text" class="form-control" id="" placeholder="Facebook" disabled>
+											</div>
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="tt-url" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Twitter</label>
+												</div>
+												<input type="text" class="form-control" id="" placeholder="Twitter" disabled>
+											</div>
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="ld-url" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Linkedin</label>
+												</div>
+												<input type="text" class="form-control" id="" placeholder="Linkedin" disabled>
+											</div>
+											<div class="form-group col-sm-6">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="sk-url" onclick="toggleInputControl(this)">
+													<label class="form-check-label" for="defaultCheck1">Skype</label>
+												</div>
+												<input type="text" class="form-control" id="" placeholder="Skype" disabled>
+											</div>
+										</div>
+										<div class="btn btn-outline-success float-right" onclick="nextStep(this)">Siguiente</div>
 									</div>
-									<input type="text" class="form-control" id="" placeholder="Facebook" disabled>
-								</div>
-								<div class="form-group col">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="tt-url" onclick="toggleInputControl(this)">
-										<label class="form-check-label" for="defaultCheck1">Twitter</label>
+									<div class="step step-2 d-none">
+										<div class="row">
+											<div class="col-sm-12">
+												<h1>Experiencia</h1>
+												<h2>Empleos anteriores</h2>
+												<div class="experience-wrapper"></div>
+											</div>
+											<form>
+												<div class="form-group col-sm-6">
+													<label for="">Empresa</label>
+													<input type="text" class="form-control" id="company" placeholder="Empresa">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Puesto</label>
+													<input type="text" class="form-control" id="role" placeholder="Puesto">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Descripción del puesto</label>
+													<input type="text" class="form-control" id="description" placeholder="Descripción del puesto">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Periodo</label>
+													<div class="row">
+														<div class="form-group col-sm-6">
+															<input type="text" class="form-control" id="from-year" placeholder="De (año)">
+														</div>
+														<div class="form-group col-sm-6">
+															<input type="text" class="form-control" id="to-year" placeholder="a (año)">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3 offset-sm-9">
+													<div class="btn btn-outline-success btn-block" onclick="addExperience(this)">Agregar</div>
+												</div>
+											</form>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<h2>Educación</h2>
+											</div>
+											<form action="">
+												<div class="form-group col-sm-6">
+													<label for="">Institución o plantel</label>
+													<input type="text" class="form-control" id="" placeholder="Institución o Plantel">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Título recibido</label>
+													<input type="text" class="form-control" id="" placeholder="Título recibido">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Descripción</label>
+													<input type="text" class="form-control" id="" placeholder="Empresa">
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="">Periodo</label>
+													<input type="text" class="form-control" id="" placeholder="Año de inicio">
+													<input type="text" class="form-control" id="" placeholder="Año de finalización">
+												</div>
+												<div class="col-sm-3 offset-sm-9">
+													<div class="btn btn-outline-success">Agregar</div>
+												</div>
+											</form>
+
+										</div>
+										<div class="w-100"></div>
+										<form action="">
+											<h2>Reconocimientos</h2>
+											<div class="form-group">
+												<label for="">Reconocimiento recibido</label>
+												<input type="text" class="form-control" id="" placeholder="Reconocimiento recibido">
+											</div>
+											<div class="form-group">
+												<label for="">Fecha</label>
+												<input type="text" class="form-control" id="" placeholder="Fecha">
+											</div>
+											<div class="btn btn-outline-success float-right">Agregar</div>
+										</form>
+										<div class="btn btn-outline-success float-right" onclick="nextStep(this)">Siguiente</div>
 									</div>
-									<input type="text" class="form-control" id="" placeholder="Twitter" disabled>
-								</div>
-								<div class="form-group col">
-									<div class="form-check">
-										<input class="form-check-input" type="checkbox" value="" id="ld-url" onclick="toggleInputControl(this)">
-										<label class="form-check-label" for="defaultCheck1">Linkedin</label>
+									<div class="step step-3 d-none">
+										<h1>Habilidades y Experiencia</h1>
+										<h2>Escribe el nombre de tu habilidad y el porcentaje en que la dominas (p.e. Inglés 80%) </h2>
+										<div class="form-group">
+											<label for="">Habilidad</label>
+											<input type="text" class="form-control" id="" placeholder="Habilidad">
+										</div>
+										<div class="form-group">
+											<label for="">Dominio</label>
+											<input type="text" class="form-control" id="" placeholder="Dominio">
+										</div>
+										<div class="btn btn-outline-success float-right">Agregar</div>
+										<div class="btn btn-outline-success float-right">Generar CV</div>
 									</div>
+<<<<<<< HEAD
 									<input type="text" class="form-control" id="" placeholder="Linkedin" disabled>
 								</div>
 								<div class="form-group col">
@@ -162,11 +262,17 @@
 							</div>
 							<div class="btn btn-primary pull-right">Agregar</div>
 							<div id="btn-cv" class="btn btn-primary pull-right">Generar CV</div>
+=======
+								</form>
+							</div>
+>>>>>>> d661b9946e48e5b9f8a8d8ad3838334fb5fffa49
 						</div>
-					</form>
+
+					</div>
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
@@ -177,3 +283,11 @@
 	<script src="js/form.js" charset="utf-8"></script>
 </body>
 </html>
+=======
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+>>>>>>> d661b9946e48e5b9f8a8d8ad3838334fb5fffa49
