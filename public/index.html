@@ -16,7 +16,8 @@
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
-				
+			<div id="sign-in" class="btn btn-outline-secondary">Facebook Login</div>
+			<div id="sign-out" class="btn btn-outline-secondary">Cerrar sesión</div>
 				<!--ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
 										<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -27,7 +28,7 @@
 			</ul-->
 		</div>
 	</nav>
-	<div class="section main-wrapper">
+	<div id="main-wrapper" class="section main-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col col-sm-8 offset-sm-2">
@@ -98,26 +99,26 @@
 							<h1>Experiencia</h1>
 							<h2>Empleos anteriores</h2>
 							<div class="experience-wrapper"></div>
-							<form>
-								<div class="form-group">
-									<label for="">Empresa</label>
-									<input type="text" class="form-control" id="company" placeholder="Empresa">
-								</div>
-								<div class="form-group">
-									<label for="">Puesto</label>
-									<input type="text" class="form-control" id="role" placeholder="Puesto">
-								</div>
-								<div class="form-group">
-									<label for="">Descripción del puesto</label>
-									<input type="text" class="form-control" id="description" placeholder="Descripción del puesto">
-								</div>
-								<div class="form-group">
-									<label for="">Periodo</label>
-									<input type="text" class="form-control" id="from-year" placeholder="Año de inicio">
-									<input type="text" class="form-control" id="to-year" placeholder="Año de finalización">
-								</div>
-								<div class="btn btn-primary pull-right" onclick="addExperience(this)">Agregar</div>
-							</form>
+
+							<div class="form-group">
+								<label for="">Empresa</label>
+								<input type="text" class="form-control" id="company" placeholder="Empresa">
+							</div>
+							<div class="form-group">
+								<label for="">Puesto</label>
+								<input type="text" class="form-control" id="role" placeholder="Puesto">
+							</div>
+							<div class="form-group">
+								<label for="">Descripción del puesto</label>
+								<input type="text" class="form-control" id="description" placeholder="Descripción del puesto">
+							</div>
+							<div class="form-group">
+								<label for="">Periodo</label>
+								<input type="text" class="form-control" id="from-year" placeholder="Año de inicio">
+								<input type="text" class="form-control" id="to-year" placeholder="Año de finalización">
+							</div>
+							<div class="btn btn-primary pull-right" onclick="addExperience(this)">Agregar</div>
+
 							<h2>Reconocimientos</h2>
 							<div class="form-group">
 								<label for="">Reconocimiento recibido</label>
@@ -127,7 +128,7 @@
 								<label for="">Fecha</label>
 								<input type="text" class="form-control" id="" placeholder="Fecha">
 							</div>
-							<div class="btn btn-primary pull-right">Agregar</div>							
+							<div class="btn btn-primary pull-right">Agregar</div>
 							<h2>Educación</h2>
 							<div class="form-group">
 								<label for="">Institución o plantel</label>
@@ -160,7 +161,7 @@
 								<input type="text" class="form-control" id="" placeholder="Dominio">
 							</div>
 							<div class="btn btn-primary pull-right">Agregar</div>
-							<div class="btn btn-primary pull-right">Generar CV</div>
+							<div id="btn-cv" class="btn btn-primary pull-right">Generar CV</div>
 						</div>
 					</form>
 				</div>
@@ -170,6 +171,9 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/firebase.js" charset="utf-8"></script>
+	<script src="js/form.js" charset="utf-8"></script>
 </body>
 </html>
