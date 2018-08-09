@@ -25,11 +25,11 @@ const toggleInputControl = currentControl => {
 
 const addExperience = currentForm => {
     let form = $(currentForm).closest("form")
-    let objectCompany = $(form).find("#company").val()
-    let objectRole = $(form).find("#role").val()
-    let objectDescription = $(form).find("#description").val()
-    let objectFromYear = $(form).find("#from-year").val()
-    let objectToYear = $(form).find("#to-year").val()
+    let objectCompany = $(form).find("#f-empresa").val()
+    let objectRole = $(form).find("#f-puesto").val()
+    let objectDescription = $(form).find("#f-descripcion").val()
+    let objectFromYear = $(form).find("#f-desde").val()
+    let objectToYear = $(form).find("#f-hasta").val()
     let experienceObject = {objectCompany,objectRole,objectDescription,objectFromYear,objectToYear}
     experienceArray.push(experienceObject)
     $(form).find("input").val("")
@@ -67,18 +67,17 @@ const changeColorSchema = schema => {
         case "schema4":
             console.log("esquema 4");
  			document.documentElement.style.setProperty(`--primary-color`, kodeGreen);
-            document.documentElement.style.setProperty(`--secondary-color`, kodeYellow); 
+            document.documentElement.style.setProperty(`--secondary-color`, kodeYellow);
              break;
 
         case "schema5":
             console.log("esquema 5");
  			document.documentElement.style.setProperty(`--primary-color`, kodeGreen);
-            document.documentElement.style.setProperty(`--secondary-color`, kodeBlue); 
-            break;     
+            document.documentElement.style.setProperty(`--secondary-color`, kodeBlue);
+            break;
     }
 }
 
 const togglePalette = btn => {
 	$(btn).siblings(".selectors-wrapper").toggleClass("active")
 }
-
