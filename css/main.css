@@ -92,10 +92,6 @@ body {
   height: auto;
 }
 
-.container {
-  background: white;
-}
-
 .navbar .navbar-brand {
   width: 100px;
 }
@@ -103,8 +99,41 @@ body {
   width: 100%;
 }
 
-.main-wrapper {
+.main-wrapper .card {
   margin-top: 20px;
+  background: url("../img/bg-pattern.png");
+  background-color: #333;
+}
+.main-wrapper .card h1, .main-wrapper .card h2 {
+  color: #0066ff;
+}
+.main-wrapper .card h1 {
+  font-size: 24px;
+}
+.main-wrapper .card h2 {
+  font-size: 20px;
+}
+.main-wrapper .card label {
+  color: #33ff00;
+}
+.main-wrapper .card .form-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-bottom: 2px solid #33ff00;
+  border-radius: 0px;
+}
+.main-wrapper .card .form-control::-webkit-input-placeholder {
+  color: white;
+}
+.main-wrapper .card .btn-outline-success {
+  border-color: #33ff00;
+  color: #33ff00;
+  font-weight: bold;
+}
+.main-wrapper .card .btn-outline-success:hover {
+  background: #33ff00;
+  color: #333;
 }
 
 .personal-data {
