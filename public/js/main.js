@@ -32,6 +32,19 @@ const addExperience = currentForm => {
     printExperience(".experience-wrapper",experienceObject)
 }
 
+const addStudies = currentForm => {
+    let form = $(currentForm).closest(".experience-form")
+    let objectCompany = $(form).find("#f-empresa").val()
+    let objectRole = $(form).find("#f-puesto").val()
+    let objectDescription = $(form).find("#f-descripcion").val()
+    let objectFromYear = $(form).find("#f-desde").val()
+    let objectToYear = $(form).find("#f-hasta").val()
+    let experienceObject = {objectCompany,objectRole,objectDescription,objectFromYear,objectToYear}
+    experienceArray.push(experienceObject)
+    $(form).find("input").val("")
+    printExperience(".experience-wrapper",experienceObject)
+}
+
 const printExperience = (experienceWrapper,obj) => {
     $(experienceWrapper).append(
         `<div class="experience-tag p-2 mr-2 mt-2">${obj.objectCompany}</div>`
