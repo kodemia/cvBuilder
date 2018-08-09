@@ -134,6 +134,7 @@ body {
 .main-wrapper .card .btn-outline-success:hover {
   background: #33ff00;
   color: #333;
+  font-weight: bold;
 }
 
 .personal-data {
