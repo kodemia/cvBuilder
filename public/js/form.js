@@ -31,5 +31,31 @@ $('#btn-cv').click((e) => {
 });
 
 var retrieveData = () => {
-  console.log('loading');
+  let dataCV = {
+    'nombre':    $('#f-nombre').val(),
+    'telefono':  $('#f-telefono').val(),
+    'ocupacion': $('#f-ocupacion').val(),
+    'direccion': $('#f-direccion').val(),
+    'email':     $('#f-email').val(),
+    'web':       $('#f-web').val(),
+    'redes_sociales': {
+      'facebook':{
+        'checkbox': $('#f-c-facebook').is(':checked'),
+        'link': $('#f-facebook').val()
+      },
+      'twitter': {
+        'checkbox': $('#f-c-twitter').is(':checked'),
+        'link': $('#f-twitter').val()
+      },
+      'linkedin': {
+        'checkbox': $('#f-c-linkedin').is(':checked'),
+        'link': $('#f-linkedin').val()
+      },
+      'skype': {
+        'checkbox': $('#f-c-skype').is(':checked'),
+        'link': $('#f-skype').val()
+      }
+    }
+  }
+  console.log(dataCV);
 }
