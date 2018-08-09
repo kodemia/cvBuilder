@@ -8,10 +8,6 @@ const kodeRed = "255,0,0";
 const kodeWhite = "208,208,208";
 var experienceArray = []
 
-const nextStep = currentStep => {
-    $(currentStep).closest(".step").toggleClass("d-none").next(".step").toggleClass("d-none")
-}
-
 const toggleInputControl = currentControl => {
     let controlValue = $(currentControl).is(":checked")
     let controlInput = $(currentControl).closest(".form-group").find(".form-control")
