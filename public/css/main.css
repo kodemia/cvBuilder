@@ -136,6 +136,12 @@ body {
   color: #333;
   font-weight: bold;
 }
+.main-wrapper .card .experience-wrapper .experience-tag {
+  border: 1px solid blue;
+  border-radius: 4px;
+  padding: 5px;
+  background: white;
+}
 
 .personal-data {
   background-image: url("../img/bg-pattern.png");

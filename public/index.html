@@ -29,98 +29,95 @@
 									<div class="row">
 										<div class="form-group col-sm-6">
 											<label for="">Nombre</label>
-											<input type="text" class="form-control" id="" placeholder="Nombre">
+											<input type="text" class="form-control" id="f-nombre" placeholder="Nombre">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Teléfono</label>
-											<input type="text" class="form-control" id="" placeholder="Teléfono">
+											<input type="text" class="form-control" id="f-telefono" placeholder="Teléfono">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Ocupación
 											</label>
-											<input type="text" class="form-control" id="" placeholder="Cargo actual">
+											<input type="text" class="form-control" id="f-cargo" placeholder="Cargo actual">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Dirección</label>
-											<input type="text" class="form-control" id="" placeholder="Dirección">
+											<input type="text" class="form-control" id="f-direccion" placeholder="Dirección">
 										</div>
-										
 										<div class="form-group col-sm-6">
 											<label for="">Email</label>
-											<input type="text" class="form-control" id="" placeholder="Email">
+											<input type="text" class="form-control" id="f-email" placeholder="Email">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Sitio Web</label>
-											<input type="text" class="form-control" id="" placeholder="Email">
+											<input type="text" class="form-control" id="f-web" placeholder="Sitio Web">
 										</div>
 									</div>
 									<h2>Redes sociales</h2>
 									<div class="row">
 										<div class="form-group col-sm-6">
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="fb-url" onclick="toggleInputControl(this)">
+												<input class="form-check-input" type="checkbox" value="" id="f-c-facebook" onclick="toggleInputControl(this)">
 												<label class="form-check-label" for="defaultCheck1">Facebook</label>
 											</div>
-											<input type="text" class="form-control" id="" placeholder="Facebook" disabled>
+											<input type="text" class="form-control" id="f-facebook" placeholder="Facebook" disabled>
 										</div>
 										<div class="form-group col-sm-6">
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="tt-url" onclick="toggleInputControl(this)">
+												<input class="form-check-input" type="checkbox" value="" id="f-t-twitter" onclick="toggleInputControl(this)">
 												<label class="form-check-label" for="defaultCheck1">Twitter</label>
 											</div>
-											<input type="text" class="form-control" id="" placeholder="Twitter" disabled>
+											<input type="text" class="form-control" id="f-twitter" placeholder="Twitter" disabled>
 										</div>
 										<div class="form-group col-sm-6">
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="ld-url" onclick="toggleInputControl(this)">
+												<input class="form-check-input" type="checkbox" value="" id="f-c-linkedin" onclick="toggleInputControl(this)">
 												<label class="form-check-label" for="defaultCheck1">Linkedin</label>
 											</div>
-											<input type="text" class="form-control" id="" placeholder="Linkedin" disabled>
+											<input type="text" class="form-control" id="f-linkedin" placeholder="Linkedin" disabled>
 										</div>
 										<div class="form-group col-sm-6">
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="sk-url" onclick="toggleInputControl(this)">
+												<input class="form-check-input" type="checkbox" value="" id="f-c-skype" onclick="toggleInputControl(this)">
 												<label class="form-check-label" for="defaultCheck1">Skype</label>
+												<input type="text" class="form-control" id="f-skype" placeholder="Skype" disabled>
 											</div>
-											<input type="text" class="form-control" id="" placeholder="Skype" disabled>
 										</div>
 									</div>
 								</div>
-								<div class="step step-2">
+								<div class="step step-2 experience-form">
 									<div class="row">
 										<div class="col-sm-12">
 											<h1>Experiencia</h1>
 											<h2>Empleos anteriores</h2>
-											<div class="experience-wrapper"></div>
+											<div class="experience-wrapper d-flex flex-row flex-wrap"></div>
 										</div>
-										
 										<div class="form-group col-sm-6">
 											<label for="">Empresa</label>
-											<input type="text" class="form-control" id="company" placeholder="Empresa">
+											<input type="text" class="form-control" id="f-empresa" placeholder="Empresa">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Puesto</label>
-											<input type="text" class="form-control" id="role" placeholder="Puesto">
+											<input type="text" class="form-control" id="f-puesto" placeholder="Puesto">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Descripción del puesto</label>
-											<input type="text" class="form-control" id="description" placeholder="Descripción del puesto">
+											<input type="text" class="form-control" id="f-descripcion" placeholder="Descripción del puesto">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Periodo</label>
 											<div class="row">
 												<div class="form-group col-sm-6">
-													<input type="text" class="form-control" id="from-year" placeholder="De (año)">
+													<input type="text" class="form-control" id="f-desde" placeholder="De (año)">
 												</div>
 												<div class="form-group col-sm-6">
-													<input type="text" class="form-control" id="to-year" placeholder="a (año)">
+													<input type="text" class="form-control" id="f-hasta" placeholder="a (año)">
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-3 offset-sm-9">
 											<div class="btn btn-outline-success btn-block" onclick="addExperience(this)">Agregar</div>
 										</div>
-										
 									</div>
 									<div class="row">
 										<div class="col-sm-12">
@@ -128,54 +125,86 @@
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Institución o plantel</label>
-											<input type="text" class="form-control" id="" placeholder="Institución o Plantel">
+											<input type="text" class="form-control" id="f-institucion" placeholder="Institución o Plantel">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Título recibido</label>
-											<input type="text" class="form-control" id="" placeholder="Título recibido">
+											<input type="text" class="form-control" id="f-titulo" placeholder="Título recibido">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Descripción</label>
-											<input type="text" class="form-control" id="" placeholder="Empresa">
+											<input type="text" class="form-control" id="f-descripcionEmpresa" placeholder="Empresa">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Periodo</label>
-											<input type="text" class="form-control" id="" placeholder="Año de inicio">
-											<input type="text" class="form-control" id="" placeholder="Año de finalización">
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" id="f-inicio" placeholder="De (año)">
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" id="f-finalizacion" placeholder="a (año)">
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="col-sm-3 offset-sm-9">
-											<div class="btn btn-outline-success">Agregar</div>
+											<div class="btn btn-outline-success btn-block">Agregar</div>
 										</div>
 									</div>
-									<h2>Reconocimientos</h2>
-									<div class="form-group">
-										<label for="">Reconocimiento recibido</label>
-										<input type="text" class="form-control" id="" placeholder="Reconocimiento recibido">
+									<div class="row">
+										<div class="col-sm-12">
+											<h2>Reconocimientos</h2>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="">Reconocimiento recibido</label>
+												<input type="text" class="form-control" id="f-reconocimiento" placeholder="Reconocimiento recibido">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="">Fecha</label>
+												<input type="text" class="form-control" id="f-fechaReconocimiento" placeholder="Fecha">
+											</div>
+										</div>
+										<div class="col-sm-3 offset-sm-9">
+											<div class="btn btn-outline-success btn-block">Agregar</div>
+										</div>
 									</div>
-									<div class="form-group">
-										<label for="">Fecha</label>
-										<input type="text" class="form-control" id="" placeholder="Fecha">
-									</div>
-									<div class="btn btn-outline-success float-right">Agregar</div>
 								</div>
 								<div class="step step-3">
-									<h1>Habilidades y Experiencia</h1>
-									<h2>Escribe el nombre de tu habilidad y el porcentaje en que la dominas (p.e. Inglés 80%) </h2>
-									<div class="form-group">
-										<label for="">Habilidad</label>
-										<input type="text" class="form-control" id="" placeholder="Habilidad">
+									<div class="row">
+										<div class="col-sm-12">
+											<h1>Habilidades y Experiencia</h1>
+											<h2>Escribe el nombre de tu habilidad y el porcentaje en que la dominas (p.e. Inglés 80%) </h2>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="">Habilidad</label>
+												<input type="text" class="form-control" id="f-habilidad" placeholder="Habilidad">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label for="">Dominio (%)</label>
+												<input type="text" class="form-control" id="f-porcentaje" placeholder="Dominio">
+											</div>
+										</div>
+										<div class="col-sm-3 offset-sm-9">
+											<div class="btn btn-outline-success btn-block">Agregar</div>
+										</div>
 									</div>
-									<div class="form-group">
-										<label for="">Dominio</label>
-										<input type="text" class="form-control" id="" placeholder="Dominio">
-									</div>
-									<div class="btn btn-outline-success float-right">Agregar</div>
-									<div class="btn btn-outline-success float-right">Generar CV</div>
 								</div>
-								
+								<div class="row">
+									<div class="col-sm-4 offset-sm-4">
+										<div class="btn btn-outline-success btn-block">Generar CV</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						
 					</div>
 				</div>
 			</div>
