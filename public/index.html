@@ -16,6 +16,8 @@
 			<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent"></div>
+			<div id="sign-in" class="btn btn-outline-success float-right">Facebook</div>
+			<div id="sign-out" class="btn btn-outline-success float-right">Salir</div>
 		</nav>
 		<div class="section main-wrapper">
 			<div class="container">
@@ -29,20 +31,20 @@
 									<div class="row">
 										<div class="form-group col-sm-6">
 											<label for="">Nombre</label>
-											<input type="text" class="form-control" id="f-nombre" placeholder="Nombre">
+											<input type="text" class="form-control" id="f-name" placeholder="Nombre">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Teléfono</label>
-											<input type="text" class="form-control" id="f-telefono" placeholder="Teléfono">
+											<input type="text" class="form-control" id="f-phone" placeholder="Teléfono">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Ocupación
 											</label>
-											<input type="text" class="form-control" id="f-cargo" placeholder="Cargo actual">
+											<input type="text" class="form-control" id="f-occupation" placeholder="Cargo actual">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Dirección</label>
-											<input type="text" class="form-control" id="f-direccion" placeholder="Dirección">
+											<input type="text" class="form-control" id="f-address" placeholder="Dirección">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Email</label>
@@ -85,7 +87,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="step step-2 experience-form">
+								<div class="step step-2 experience-form all-wrapper">
 									<div class="row">
 										<div class="col-sm-12">
 											<h1>Experiencia</h1>
@@ -94,113 +96,120 @@
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Empresa</label>
-											<input type="text" class="form-control" id="f-empresa" placeholder="Empresa">
+											<input type="text" class="form-control f-experience" id="f-company" placeholder="Empresa">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Puesto</label>
-											<input type="text" class="form-control" id="f-puesto" placeholder="Puesto">
+											<input type="text" class="form-control f-experience" id="f-role" placeholder="Puesto">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Descripción del puesto</label>
-											<input type="text" class="form-control" id="f-descripcion" placeholder="Descripción del puesto">
+											<input type="text" class="form-control f-experience" id="f-descripcionRole" placeholder="Descripción del puesto">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Periodo</label>
 											<div class="row">
 												<div class="form-group col-sm-6">
-													<input type="text" class="form-control" id="f-desde" placeholder="De (año)">
+													<input type="text" class="form-control f-experience" id="f-fromJobs" placeholder="De (año)">
 												</div>
 												<div class="form-group col-sm-6">
-													<input type="text" class="form-control" id="f-hasta" placeholder="a (año)">
+													<input type="text" class="form-control f-experience" id="f-toJobs" placeholder="a (año)">
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-3 offset-sm-9">
-											<div class="btn btn-outline-success btn-block" onclick="addExperience(this)">Agregar</div>
+											<div id="btn-experience" class="btn btn-outline-success btn-block">Agregar</div>
 										</div>
 									</div>
+								</div>
+								<div class="step step-2 education-form all-wrapper">
 									<div class="row">
 										<div class="col-sm-12">
 											<h2>Educación</h2>
+											<div class="education-wrapper d-flex flex-row flex-wrap"></div>
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Institución o plantel</label>
-											<input type="text" class="form-control" id="f-institucion" placeholder="Institución o Plantel">
+											<input type="text" class="form-control f-education" id="f-institution" placeholder="Institución o Plantel">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Título recibido</label>
-											<input type="text" class="form-control" id="f-titulo" placeholder="Título recibido">
+											<input type="text" class="form-control f-education" id="f-title" placeholder="Título recibido">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Descripción</label>
-											<input type="text" class="form-control" id="f-descripcionEmpresa" placeholder="Empresa">
+											<input type="text" class="form-control f-education" id="f-descriptionEducation" placeholder="Descripción">
 										</div>
 										<div class="form-group col-sm-6">
 											<label for="">Periodo</label>
 											<div class="row">
 												<div class="col-sm-6">
 													<div class="form-group">
-														<input type="text" class="form-control" id="f-inicio" placeholder="De (año)">
+														<input type="text" class="form-control f-education" id="f-fromEducation" placeholder="De (año)">
 													</div>
 												</div>
 												<div class="col-sm-6">
 													<div class="form-group">
-														<input type="text" class="form-control" id="f-finalizacion" placeholder="a (año)">
+														<input type="text" class="form-control f-education" id="f-toEducation" placeholder="a (año)">
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="col-sm-3 offset-sm-9">
-											<div class="btn btn-outline-success btn-block">Agregar</div>
+											<div id="btn-education" class="btn btn-outline-success btn-block">Agregar</div>
 										</div>
 									</div>
+								</div>
+								<div class="step step-2 recognition-form all-wrapper">
 									<div class="row">
 										<div class="col-sm-12">
 											<h2>Reconocimientos</h2>
+											<div class="recognition-wrapper d-flex flex-row flex-wrap"></div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label for="">Reconocimiento recibido</label>
-												<input type="text" class="form-control" id="f-reconocimiento" placeholder="Reconocimiento recibido">
+												<input type="text" class="form-control f-recognition" id="f-recognitionReceived" placeholder="Reconocimiento recibido">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label for="">Fecha</label>
-												<input type="text" class="form-control" id="f-fechaReconocimiento" placeholder="Fecha">
+												<input type="text" class="form-control f-recognition" id="f-recognitionDate" placeholder="Fecha">
 											</div>
 										</div>
 										<div class="col-sm-3 offset-sm-9">
-											<div class="btn btn-outline-success btn-block">Agregar</div>
+											<div id="btn-recognition" class="btn btn-outline-success btn-block">Agregar</div>
 										</div>
 									</div>
 								</div>
-								<div class="step step-3">
+								<div class="step step-3 skill-form all-wrapper">
 									<div class="row">
 										<div class="col-sm-12">
 											<h1>Habilidades y Experiencia</h1>
 											<h2>Escribe el nombre de tu habilidad y el porcentaje en que la dominas (p.e. Inglés 80%) </h2>
+											<div class="skill-wrapper d-flex flex-row flex-wrap"></div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label for="">Habilidad</label>
-												<input type="text" class="form-control" id="f-habilidad" placeholder="Habilidad">
+												<input type="text" class="form-control f-skill" id="f-skill" placeholder="Habilidad">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label for="">Dominio (%)</label>
-												<input type="text" class="form-control" id="f-porcentaje" placeholder="Dominio">
+												<input type="text" class="form-control f-skill" id="f-skillPercentage" placeholder="Dominio">
 											</div>
 										</div>
 										<div class="col-sm-3 offset-sm-9">
-											<div class="btn btn-outline-success btn-block">Agregar</div>
+											<div id="btn-skill" class="btn btn-outline-success btn-block">Agregar</div>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-4 offset-sm-4">
-										<div class="btn btn-outline-success btn-block">Generar CV</div>
+										<div id="btn-cv" class="btn btn-outline-success btn-block">Generar CV</div>
 									</div>
 								</div>
 							</div>
@@ -209,9 +218,26 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="modal-cv" class="modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p></p>
+					</div>
+					<div class="modal-footer">
+						<button id="btn-close-modal" type="button" class="btn btn-primary"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/firebase.js" charset="utf-8"></script>
+		<script src="js/form.js" charset="utf-8"></script>
 	</body>
 </html>

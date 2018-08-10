@@ -6,7 +6,6 @@ const kodeMagenta = "204,0,255";
 const kodeCyan = "0,255,255";
 const kodeRed = "255,0,0";
 const kodeWhite = "208,208,208";
-var experienceArray = []
 
 const toggleInputControl = currentControl => {
     let controlValue = $(currentControl).is(":checked")
@@ -19,18 +18,6 @@ const toggleInputControl = currentControl => {
     );
 }
 
-const addExperience = currentForm => {
-    let form = $(currentForm).closest(".experience-form")
-    let objectCompany = $(form).find("#f-empresa").val()
-    let objectRole = $(form).find("#f-puesto").val()
-    let objectDescription = $(form).find("#f-descripcion").val()
-    let objectFromYear = $(form).find("#f-desde").val()
-    let objectToYear = $(form).find("#f-hasta").val()
-    let experienceObject = {objectCompany,objectRole,objectDescription,objectFromYear,objectToYear}
-    experienceArray.push(experienceObject)
-    $(form).find("input").val("")
-    printExperience(".experience-wrapper",experienceObject)
-}
 
 const addStudies = currentForm => {
     let form = $(currentForm).closest(".experience-form")
@@ -43,12 +30,6 @@ const addStudies = currentForm => {
     experienceArray.push(experienceObject)
     $(form).find("input").val("")
     printExperience(".experience-wrapper",experienceObject)
-}
-
-const printExperience = (experienceWrapper,obj) => {
-    $(experienceWrapper).append(
-        `<div class="experience-tag p-2 mr-2 mt-2">${obj.objectCompany}</div>`
-    )
 }
 
 const changeColorSchema = schema => {
